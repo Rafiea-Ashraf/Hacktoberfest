@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your CSS styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .alert {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .alert-low {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .alert-medium {
+            background-color: #FFC107;
+            color: black;
+        }
+
+        .alert-high {
+            background-color: #FF5733;
+            color: white;
+        }
+
+        .alert-extreme {
+            background-color: #FF0000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="navigation"></div>
+    <header>
+        <div class="container">
+            <h1>Services</h1>
+        </div>
+    </header>
+    <section class="services">
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr. No</th>
+                        <th>Sensor Name</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                        <th>Sensor State</th>
+                        <th>Alerts</th>
+                    </tr>
+                </thead>
+                <tbody id="sensorDataBody">
+                    <!-- Sensor data will be inserted dynamically here -->
+                </tbody>
+            </table>
+            <!-- <div id="overallAlert" class="alert alert-low">Overall Alert: Low</div>
+        </div> -->
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Function to fetch data from the server and update the table
+        function fetchSensorData() {
+            // Send a GET request to retrieve data from the server
+            fetch('http://robr74.sg-host.com/get_data.php')
+            .then(response => response.json()) // Parse the JSON response
+            .then(data => {
+                // Get the table body element
+                var tbody = document.getElementById('sensorDataBody');
+                var overallAlert = document.getElementById('overallAlert');
+
+                // Clear any existing rows in the table body
+                tbody.innerHTML = '';
+
+                // Determine overall alert level
+                var numSensorsWithData = 0;
+                var alertMessages = [];
+
+                if (data.temperature !== '') {
+                    if (data.temperature > 80) {
+                        alertMessages.push("Temperature is more than 80");
+                        numSensorsWithData++;
+                    }
+                    tbody.innerHTML += `<tr>
+                                            <td>1</td>
+                                            <td>Temperature Sensor</td>
+                                            <td>${data.datetime}</td>
+                                            <td>Active</td>
+                                            <td>${data.temperature > 80 ? 'High' : 'Normal'}</td>
+                                            <td>${data.temperature}</td>
+                                        </tr>`;
+                }
+                if (data.gas !== '') {
+                    if (data.gas > 0.5) { // Adjust threshold as needed
+                        alertMessages.push("Gas level is high");
+                        numSensorsWithData++;
+                    }
+                    tbody.innerHTML += `<tr>
+                                            <td>2</td>
+                                            <td>Gas Sensor</td>
+                                            <td>${data.datetime}</td>
+                                            <td>Active</td>
+                                            <td>${data.gas > 0.5 ? 'High' : 'Normal'}</td>
+                                            <td>${data.gas}</td>
+                                        </tr>`;
+                }
+                if (data.flame !== '') {
+                    if (data.flame > 0) {
+                        alertMessages.push("Flame detected");
+                        numSensorsWithData++;
+                    }
+                    tbody.innerHTML += `<tr>
+                                            <td>3</td>
+                                            <td>Flame Sensor</td>
+                                            <td>${data.datetime}</td>
+                                            <td>Active</td>
+                                            <td>${data.flame > 0 ? 'Detected' : 'Normal'}</td>
+                                            <td>${data.flame}</td>
+                                        </tr>`;
+                }
+                if (data.pir !== '') {
+                    if (data.pir > 0) {
+                        alertMessages.push("Motion detected");
+                        numSensorsWithData++;
+                    }
+                    tbody.innerHTML += `<tr>
+                                            <td>4</td>
+                                            <td>PIR Sensor</td>
+                                            <td>${data.datetime}</td>
+                                            <td>Active</td>
+                                            <td>${data.pir > 0 ? 'Detected' : 'Normal'}</td>
+                                            <td>${data.pir}</td>
+                                        </tr>`;
+                }
+
+                var alertLevel = '';
+                if (numSensorsWithData === 1) {
+                    alertLevel = 'Low';
+                } else if (numSensorsWithData === 2) {
+                    alertLevel = 'Medium';
+                } else if (numSensorsWithData === 3) {
+                    alertLevel = 'High';
+                } else if (numSensorsWithData === 4) {
+                    alertLevel = 'Extreme';
+                } else {
+                    alertLevel = 'None';
+                }
+
+                overallAlert.textContent = 'Overall Alert: ' + alertLevel;
+                overallAlert.className = 'alert alert-' + alertLevel.toLowerCase();
+
+                // Log individual sensor alerts
+                console.log('Individual Alerts:', alertMessages.join(', '));
+            })
+            .catch(error => console.error('Error fetching sensor data:', error));
+        }
+
+        // Call the function to initially fetch and display sensor data
+        fetchSensorData();
+
+        // Call the function every 5 seconds to update the table
+        setInterval(fetchSensorData, 5000);
+
+        // Fetch the navigation menu
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navigation").innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

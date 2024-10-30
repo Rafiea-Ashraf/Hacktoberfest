@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navigation"></div>
+    <header>
+        <h1>AI-Based False Alarm Detector</h1>
+        <p>Explore the details of our project and its milestones.</p>
+    </header>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="project-overview">
+        <div class="overview-header">
+            <h2>Project Overview:</h2>
+        </div>
+        <div class="overview-content">
+            <div class="overview-item">
+                <h3>Mission:</h3>
+                <p>Due to false alarm coming from sensors a lot of times, sometimes people missed the actual alarm and it causes some serious damage. Our mission is to overcome this and make a cost friendly project that can detect the false alarm and stop it.</p>
+            </div>
+            <div class="overview-item">
+                <h3>Vision:</h3>
+                <p>As we strive to create the ideal alarm detector, our vision is anchored in harnessing the power of AI. By employing cutting-edge artificial intelligence technologies, we aim to revolutionize the way data is analyzed, ensuring that each reading is not just accurate, but consistently precise. Our commitment lies in crafting a detector that seamlessly integrates AI capabilities to deliver unmatched reliability and effectiveness.</p>
+            </div>
+            <div class="overview-item">
+                <h3>Values:</h3>
+                <p>When we build these detectors, we want them to be trustworthy and considerate, so they don't make mistakes or cause unnecessary worry. By sticking to good values, the detector can be more reliable and respectful in its job.</p>
+            </div>
+            <div class="overview-item">
+                <h3>Goals:</h3>
+                <p> It aims to become adept at identifying genuine emergencies swiftly and accurately, while also avoiding the issuance of false alarms that could needlessly unsettle people. By defining clear goals, the detector gains a sense of purpose and direction, enabling it to navigate the complexities of its task with precision and reliability.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+    <!-- Team Members Section -->
+    <section class="team container">
+        <h2>Our Team Members:</h2>
+        <div class="team-member">
+            <img src="images/forweb.jpg" alt="Team Member 1">
+            <h3>Rafiea Ashraf</h3>
+            <p class="role">Team leader and Front-end developer</p>
+            <p class="bio">She worked as a team leader and front-end developer extraordinaire. With her at the helm, projects thrive and deadlines are met with finesse. Her leadership skills and front-end expertise ensure that every aspect of work shines. From guiding the team to crafting seamless user experiences, she's the cornerstone of success.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/karamat.jpg" alt="Team Member 2">
+            <h3>Karamt Ullah</h3>
+            <p class="role">Project researcher and technical writer</p>
+            <p class="bio">He worked as project researcher and technical writer. He navigates research intricacies with precision, unraveling insights that fuel projects. With his eloquent prose, he transforms complex ideas into captivating narratives, ensuring our work resonates with clarity and impact.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/rizwan.jpg" alt="Team Member 3">
+            <h3>Rizwan Ullah</h3>
+            <p class="role">Back-end Developer</p>
+            <p class="bio"> He is a valued member of our team who has brought unique insights and perspectives to our discussions. His contributions have been evident in this endeavor, we recognize his potential to make this project possible.</div>
+    </section>
+
+    <!-- Project Milestones Section -->
+    <section class="project-milestones container">
+        <h2>Project Milestones:</h2>
+        <div class="milestone">
+            <h3>Milestone 1:</h3>
+            <p class="date">21st August, 2023</p>
+            <p class="description">Porject title has been decided. Worked on all background research and start the making of website.</p>
+        </div>
+        <div class="milestone">
+            <h3>Milestone 2:</h3>
+            <p class="date">7th December, 2023</p>
+            <p class="description">50% work done on software of project. Starts the research on thesis. Gets all the hardware component needed for the project.</p>
+        </div>
+        <div class="milestone">
+            <h3>Milestone 3:</h3>
+            <p class="date">4th April, 2024</p>
+            <p class="description">Website is worked and is connected to hardware, showing data. Thesis is complete. Project is in working condition.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Our Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navigation").innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

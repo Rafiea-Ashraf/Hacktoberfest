@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navigation"></div>
+    <div class="form-container">
+        <div class="form-wrapper">
+            <form id="loginForm" class="form active-form">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <input type="email" required placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="password" required placeholder="Password">
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p class="toggle-form">Don't have an account? <a href="#" onclick="toggleForm()">Register</a></p>
+            </form>
+
+            <form id="registerForm" class="form">
+                <h2>Register</h2>
+                <div class="input-box">
+                    <input type="text" required placeholder="Username">
+                </div>
+                <div class="input-box">
+                    <input type="email" required placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="password" required placeholder="Password">
+                </div>
+                <div class="input-box">
+                    <input type="password" required placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p class="toggle-form">Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navigation").innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

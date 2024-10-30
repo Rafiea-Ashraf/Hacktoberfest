@@ -1,0 +1,634 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-wrapper {
+    width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    display: none;
+    text-align: center;
+}
+
+.active-form {
+    display: block;
+}
+
+.form h2 {
+    margin-bottom: 20px;
+    color: #162938;
+    font-weight: bold;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s;
+}
+
+.input-box input:focus {
+    background-color: #eaeaea;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #162938;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e3c72;
+}
+
+.toggle-form a {
+    color: #162938;
+    text-decoration: none;
+}
+
+.toggle-form a:hover {
+    text-decoration: underline;
+}
+
+/* natigation  */
+nav {
+    background-color: #162938;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #ff6f61;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.header-description {
+    font-size: 18px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.feature {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 30%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature i {
+    font-size: 48px;
+    color: #007bff;
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+}
+
+.hardware {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.hardware h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hardware-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hardware-description {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.hardware-description h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hardware-description p {
+    font-size: 16px;
+    color: #666;
+}
+
+.hardware-description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hardware-description ul li {
+    font-size: 16px;
+    color: #666;
+    padding: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Navigation styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.nav-logo h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #162938;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.feature {
+    flex: 1 1 300px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature i {
+    font-size: 36px;
+    color: #162938;
+    margin-bottom: 20px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Team Section Heading */
+.team-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.team-heading h2 {
+    font-size: 36px;
+    color: #162938;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.team-heading h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #162938;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 20px 20px;
+    max-width: 300px;
+    flex: 1 1 300px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #162938;
+}
+
+.team-member .role {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.team-member .bio {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+/* Project Overview Section */
+.project-overview {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+}
+
+.overview-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.overview-header h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.overview-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.overview-item {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 40px;
+}
+
+.overview-item h3 {
+    font-size: 24px;
+    color: #162938;
+}
+
+.overview-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Project Milestones Section */
+.project-milestones {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-milestones h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #162938;
+}
+
+.milestone {
+    margin-bottom: 20px;
+}
+
+.milestone h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #162938;
+}
+
+.milestone p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.milestone .date {
+    font-size: 14px;
+    color: #888;
+}
+
+.milestone .description {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #162938;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+}
+
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.team-contact {
+    flex: 0 0 45%;
+}
+
+.team-contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #162938;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #162938;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 0;
+}
+
+.services table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.services th, .services td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.services th {
+    background-color: #162938;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #162938;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+}

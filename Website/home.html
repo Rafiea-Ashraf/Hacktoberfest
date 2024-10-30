@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navigation"></div>
+    <header>
+        <h1>AI-Based False Alarm Detector </h1>
+        <p>Explore our services and contact us for more information.</p>
+    </header>
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-laptop-code"></i>
+            <h2>Sensors reading</h2>
+            <p>There are four sensors placed in this detector. It checks all the live readings of sensors , compare them and then give output.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-cogs"></i>
+            <h2>Hardware</h2>
+            <p>It gives the reading from the hardware that is IOT based. IT contains four sensors, aurdino , connecting wires and other useful components and is a alarm detector</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-comments"></i>
+            <h2>Data Storage</h2>
+            <p>Any reading comming from the sensors will be stored and saved in website and can be accessed anytime for future reference.</p>
+        </div>
+    </section>
+    <section class="hardware">
+        <h2>Hardware Features:</h2>
+        <div class="hardware-info">
+            <img src="hardware.png" alt="Hardware Image">
+            <div class="hardware-description">
+                <h3>False alarm detector:</h3>
+                <p>This is a brief description of our project and all it's important features. It's designed to provide...</p>
+                <ul>
+                    <li>Feature 1: It takes live reading of all four sensors conneting in it.</li>
+                    <li>Feature 2: Our project is connected to this website that will contains and shows all the reading of sensors.</li>
+                    <li>Feature 3: System checks whether the alarm coming form sensors is a correct one and then act according to it.</li>
+                    <li>Feature 4: Our system has a User-friendly interface and is easy to use.</li>
+                    <li>Feature 5: Advanced data analytics capabilities that makes it an AI-based alarm detector.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navigation").innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>
